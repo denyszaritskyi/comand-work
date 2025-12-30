@@ -19,6 +19,7 @@ const dishes: Dish[] = dishesData
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string>('Всі')
+  const [sort, setSort] = useState<'asc' | 'desc'>('asc')
 
   const categories = useMemo(
     () => ['Всі', ...Array.from(new Set(dishes.map((d) => d.category)))],
@@ -26,9 +27,15 @@ export default function Home() {
   )
 
   const visible = useMemo(() => {
-    if (selectedCategory === 'Всі') return dishes
-    return dishes.filter((d) => d.category === selectedCategory)
-  }, [selectedCategory])
+    const filtered =
+      selectedCategory === 'Всі'
+        ? dishes
+        : dishes.filter((d) => d.category === selectedCategory)
+    const sorted = [...filtered].sort((a, b) =>
+      sort === 'asc' ? a.price - b.price : b.price - a.price
+    )
+    return sorted
+  }, [selectedCategory, sort])
 
   return (
     <div className="text-foreground min-h-screen bg-zinc-50 font-sans">
@@ -57,6 +64,26 @@ export default function Home() {
           selected={selectedCategory}
           onSelect={setSelectedCategory}
         />
+
+        <div className="mt-3 flex justify-end">
+          <div className="border-border bg-card flex items-center gap-2 rounded-full border px-3 py-2 shadow-sm">
+            <label
+              className="text-muted-foreground text-sm font-medium"
+              htmlFor="sort"
+            >
+              Сортування:
+            </label>
+            <select
+              id="sort"
+              value={sort}
+              onChange={(e) => setSort(e.target.value as 'asc' | 'desc')}
+              className="border-border bg-background focus:ring-ring rounded-full border px-3 py-1 text-sm font-medium shadow-inner focus:ring-2 focus:outline-none"
+            >
+              <option value="asc">Ціна: за зростанням</option>
+              <option value="desc">Ціна: за спаданням</option>
+            </select>
+          </div>
+        </div>
 
         <section className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {visible.map((dish) => (
