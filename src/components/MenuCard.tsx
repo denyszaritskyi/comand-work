@@ -14,7 +14,7 @@ export default function MenuCard({
   description,
 }: Props) {
   return (
-    <article className="group border-border bg-card text-card-foreground focus-within:ring-ring cursor-pointer overflow-hidden rounded-xl border shadow-sm transition focus-within:ring-2 hover:-translate-y-0.5 hover:shadow-md">
+    <article className="group border-border bg-card text-card-foreground focus-within:ring-ring flex h-full cursor-pointer flex-col overflow-hidden rounded-xl border shadow-sm transition focus-within:ring-2 hover:-translate-y-0.5 hover:shadow-md">
       <div className="relative aspect-4/3 w-full overflow-hidden">
         <Image
           src={imageSrc}
@@ -25,14 +25,22 @@ export default function MenuCard({
           priority={false}
         />
       </div>
-      <div className="flex flex-col gap-2 p-3">
-        <div className="flex items-center justify-between gap-2">
+      <div className="flex flex-1 flex-col gap-3 p-3">
+        <div className="flex items-start justify-between gap-2">
           <h3 className="text-sm leading-tight font-semibold">{name}</h3>
-          <span className="text-sm font-bold">{price} грн</span>
+          <span className="text-sm font-bold whitespace-nowrap">
+            {price} грн
+          </span>
         </div>
         <p className="text-muted-foreground line-clamp-2 text-xs">
           {description}
         </p>
+        <button
+          type="button"
+          className="bg-foreground text-background hover:bg-foreground/90 focus-visible:ring-ring mt-auto flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold shadow-sm transition focus-visible:ring-2 focus-visible:outline-none"
+        >
+          Додати в кошик
+        </button>
       </div>
     </article>
   )

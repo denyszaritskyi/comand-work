@@ -19,6 +19,7 @@ const dishes: Dish[] = dishesData
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string>('Всі')
+  const [query, setQuery] = useState<string>('')
   const [sort, setSort] = useState<'asc' | 'desc'>('asc')
 
   const categories = useMemo(
@@ -27,15 +28,19 @@ export default function Home() {
   )
 
   const visible = useMemo(() => {
+    const normalizedQuery = query.trim().toLowerCase()
     const filtered =
       selectedCategory === 'Всі'
         ? dishes
         : dishes.filter((d) => d.category === selectedCategory)
-    const sorted = [...filtered].sort((a, b) =>
+    const filteredByQuery = normalizedQuery
+      ? filtered.filter((d) => d.name.toLowerCase().includes(normalizedQuery))
+      : filtered
+    const sorted = [...filteredByQuery].sort((a, b) =>
       sort === 'asc' ? a.price - b.price : b.price - a.price
     )
     return sorted
-  }, [selectedCategory, sort])
+  }, [query, selectedCategory, sort])
 
   return (
     <div className="text-foreground min-h-screen bg-zinc-50 font-sans">
@@ -65,7 +70,24 @@ export default function Home() {
           onSelect={setSelectedCategory}
         />
 
-        <div className="mt-3 flex justify-end">
+        <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="border-border bg-background focus-within:ring-ring flex items-center gap-2 rounded-full border px-4 py-2 shadow-inner focus-within:ring-2">
+            <label
+              className="text-muted-foreground text-sm font-medium"
+              htmlFor="search"
+            >
+              Пошук:
+            </label>
+            <input
+              id="search"
+              type="search"
+              placeholder="Введіть назву страви"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="placeholder:text-muted-foreground/70 bg-transparent text-sm outline-none"
+            />
+          </div>
+
           <div className="border-border bg-card flex items-center gap-2 rounded-full border px-3 py-2 shadow-sm">
             <label
               className="text-muted-foreground text-sm font-medium"
