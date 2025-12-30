@@ -1,10 +1,12 @@
 import Image from 'next/image'
+import type { KeyboardEvent } from 'react'
 
 type Props = {
   imageSrc: string
   name: string
   price: number
   description: string
+  onSelect?: () => void
 }
 
 export default function MenuCard({
@@ -12,9 +14,23 @@ export default function MenuCard({
   name,
   price,
   description,
+  onSelect,
 }: Props) {
+  const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      onSelect?.()
+    }
+  }
+
   return (
-    <article className="group border-border bg-card text-card-foreground focus-within:ring-ring flex h-full cursor-pointer flex-col overflow-hidden rounded-xl border shadow-sm transition focus-within:ring-2 hover:-translate-y-0.5 hover:shadow-md">
+    <article
+      className="group border-border bg-card text-card-foreground focus-within:ring-ring flex h-full cursor-pointer flex-col overflow-hidden rounded-xl border shadow-sm transition focus-within:ring-2 hover:-translate-y-0.5 hover:shadow-md"
+      onClick={onSelect}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+    >
       <div className="relative aspect-4/3 w-full overflow-hidden">
         <Image
           src={imageSrc}
