@@ -112,6 +112,8 @@ export default function Home() {
               name={dish.name}
               price={dish.price}
               description={dish.description}
+              rating={dish.rating}
+              reviewsCount={dish.reviewsCount}
               onSelect={() => openDish(dish)}
             />
           ))}

@@ -6,6 +6,8 @@ type Props = {
   name: string
   price: number
   description: string
+  rating: number
+  reviewsCount: number
   onSelect?: () => void
 }
 
@@ -14,6 +16,8 @@ export default function MenuCard({
   name,
   price,
   description,
+  rating,
+  reviewsCount,
   onSelect,
 }: Props) {
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
@@ -46,6 +50,12 @@ export default function MenuCard({
           <h3 className="text-sm leading-tight font-semibold">{name}</h3>
           <span className="text-sm font-bold whitespace-nowrap">
             {price} грн
+          </span>
+        </div>
+        <div className="flex items-center gap-2 text-xs font-semibold text-amber-600">
+          <span aria-label="Рейтинг">★ {rating.toFixed(1)}</span>
+          <span className="text-muted-foreground text-[11px] font-medium">
+            ({reviewsCount})
           </span>
         </div>
         <p className="text-muted-foreground line-clamp-2 text-xs">

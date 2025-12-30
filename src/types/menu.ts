@@ -17,5 +17,7 @@ export type Dish = {
   description: string
   category: string
   imageSrc: string
+  rating: number
+  reviewsCount: number
   addons?: AddonOption[]
 }
