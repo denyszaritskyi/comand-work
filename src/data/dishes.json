@@ -5,7 +5,7 @@
     "price": 95,
     "description": "Ніжний омлет з кропом та петрушкою.",
     "category": "Сніданки",
-    "imageSrc": "/pexels-pixabay-260922.jpg"
+    "imageSrc": "/dishes/photo-1534790566855-4cb788d389ec.avif"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "price": 120,
     "description": "Домашні сирники з родзинками та сметаною.",
     "category": "Сніданки",
-    "imageSrc": "/pexels-pixabay-260922.jpg"
+    "imageSrc": "/dishes/premium_photo-1667807521536-bc35c8d8b64b.avif"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "price": 145,
     "description": "Ніжний суп-пюре з гарбуза та вершків.",
     "category": "Обіди",
-    "imageSrc": "/pexels-pixabay-260922.jpg"
+    "imageSrc": "/dishes/photo-1574071318508-1cdbab80d002.avif"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "price": 180,
     "description": "Класична паста з м’ясним соусом.",
     "category": "Обіди",
-    "imageSrc": "/pexels-pixabay-260922.jpg"
+    "imageSrc": "/dishes/photo-1622973536968-3ead9e780960.avif"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "price": 210,
     "description": "Соковите куряче філе на грилі.",
     "category": "Вечері",
-    "imageSrc": "/pexels-pixabay-260922.jpg"
+    "imageSrc": "/dishes/photo-1623084921164-4a8c5c37a912.avif"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "price": 140,
     "description": "Класичний чізкейк з ягідним соусом.",
     "category": "Десерти",
-    "imageSrc": "/pexels-pixabay-260922.jpg"
+    "imageSrc": "/dishes/photo-1628840042765-356cda07504e.avif"
   },
   {
     "id": 7,
@@ -53,6 +53,54 @@
     "price": 75,
     "description": "Домашній лимонад з м’ятою.",
     "category": "Напої",
-    "imageSrc": "/pexels-pixabay-260922.jpg"
+    "imageSrc": "/dishes/photo-1643594462181-7667928d072e.avif"
+  },
+  {
+    "id": 8,
+    "name": "Бургер класичний",
+    "price": 165,
+    "description": "Яловичина, сир чеддер, огірок, соус, булочка бріош.",
+    "category": "Бургери",
+    "imageSrc": "/dishes/photo-1568901346375-23c9450c58cd.avif"
+  },
+  {
+    "id": 9,
+    "name": "Бургер BBQ",
+    "price": 185,
+    "description": "Яловичина, бекон, соус BBQ, карамелізована цибуля.",
+    "category": "Бургери",
+    "imageSrc": "/dishes/premium_photo-1669559809094-1d6942e1531e.avif"
+  },
+  {
+    "id": 10,
+    "name": "Піца Маргарита",
+    "price": 190,
+    "description": "Томатний соус, моцарела, базилік, оливкова олія.",
+    "category": "Піци",
+    "imageSrc": "/dishes/premium_photo-1691090282592-ec90f6ecba94.avif"
+  },
+  {
+    "id": 11,
+    "name": "Піца Пепероні",
+    "price": 210,
+    "description": "Моцарела, томатний соус, салямі пепероні.",
+    "category": "Піци",
+    "imageSrc": "/dishes/premium_photo-1690561082636-06237f98bfab.avif"
+  },
+  {
+    "id": 12,
+    "name": "Салат Цезар",
+    "price": 150,
+    "description": "Курка гриль, пармезан, крутони, соус цезар.",
+    "category": "Салати",
+    "imageSrc": "/dishes/premium_photo-1700089483464-4f76cc3d360b.avif"
+  },
+  {
+    "id": 13,
+    "name": "Салат Грецький",
+    "price": 145,
+    "description": "Фета, оливки, огірок, томати, оливкова олія.",
+    "category": "Салати",
+    "imageSrc": "/dishes/premium_photo-1722686461601-b2a018a4213b.avif"
   }
 ]
