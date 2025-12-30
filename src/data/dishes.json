@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Омлет з зеленню",
+    "price": 95,
+    "description": "Ніжний омлет з кропом та петрушкою.",
+    "category": "Сніданки",
+    "imageSrc": "/pexels-pixabay-260922.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Сирники зі сметаною",
+    "price": 120,
+    "description": "Домашні сирники з родзинками та сметаною.",
+    "category": "Сніданки",
+    "imageSrc": "/pexels-pixabay-260922.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Крем-суп з гарбуза",
+    "price": 145,
+    "description": "Ніжний суп-пюре з гарбуза та вершків.",
+    "category": "Обіди",
+    "imageSrc": "/pexels-pixabay-260922.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Паста Болоньєзе",
+    "price": 180,
+    "description": "Класична паста з м’ясним соусом.",
+    "category": "Обіди",
+    "imageSrc": "/pexels-pixabay-260922.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Стейк курячий",
+    "price": 210,
+    "description": "Соковите куряче філе на грилі.",
+    "category": "Вечері",
+    "imageSrc": "/pexels-pixabay-260922.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Чізкейк",
+    "price": 140,
+    "description": "Класичний чізкейк з ягідним соусом.",
+    "category": "Десерти",
+    "imageSrc": "/pexels-pixabay-260922.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Лимонад",
+    "price": 75,
+    "description": "Домашній лимонад з м’ятою.",
+    "category": "Напої",
+    "imageSrc": "/pexels-pixabay-260922.jpg"
+  }
+]

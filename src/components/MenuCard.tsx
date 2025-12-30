@@ -1,0 +1,39 @@
+import Image from 'next/image'
+
+type Props = {
+  imageSrc: string
+  name: string
+  price: number
+  description: string
+}
+
+export default function MenuCard({
+  imageSrc,
+  name,
+  price,
+  description,
+}: Props) {
+  return (
+    <article className="group border-border bg-card text-card-foreground focus-within:ring-ring cursor-pointer overflow-hidden rounded-xl border shadow-sm transition focus-within:ring-2 hover:-translate-y-0.5 hover:shadow-md">
+      <div className="relative aspect-4/3 w-full overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={name}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          priority={false}
+        />
+      </div>
+      <div className="flex flex-col gap-2 p-3">
+        <div className="flex items-center justify-between gap-2">
+          <h3 className="text-sm leading-tight font-semibold">{name}</h3>
+          <span className="text-sm font-bold">{price} грн</span>
+        </div>
+        <p className="text-muted-foreground line-clamp-2 text-xs">
+          {description}
+        </p>
+      </div>
+    </article>
+  )
+}
