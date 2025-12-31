@@ -20,7 +20,7 @@ const dishes: Dish[] = dishesData
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string>('Всі')
   const [query, setQuery] = useState<string>('')
-  const [sort, setSort] = useState<'asc' | 'desc'>('asc')
+  const [sort, setSort] = useState<'asc' | 'desc'>('desc')
   const [activeDish, setActiveDish] = useState<Dish | null>(null)
   const [selectedSize, setSelectedSize] = useState<string>('m')
   const [selectedAddons, setSelectedAddons] = useState<Set<string>>(new Set())
