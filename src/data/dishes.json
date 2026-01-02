@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "name": "Омлет з зеленню",
+    "price": 95,
+    "description": "Ніжний омлет з кропом та петрушкою.",
+    "category": "Сніданки",
+    "imageSrc": "/dishes/omlet.avif",
+    "rating": 4.7,
+    "reviewsCount": 128,
+    "addons": [
+      { "id": "omelet-feta", "label": "Сир фета", "price": 18 },
+      { "id": "omelet-tomato", "label": "Свіжі томати", "price": 12 },
+      { "id": "omelet-avocado", "label": "Авокадо", "price": 20 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Сирники зі сметаною",
+    "price": 120,
+    "description": "Домашні сирники з родзинками та сметаною.",
+    "category": "Сніданки",
+    "imageSrc": "/dishes/sirniki.avif",
+    "rating": 4.8,
+    "reviewsCount": 214,
+    "addons": [
+      { "id": "syrnyky-berries", "label": "Ягідний мікс", "price": 18 },
+      { "id": "syrnyky-honey", "label": "Мед", "price": 12 },
+      { "id": "syrnyky-caramel", "label": "Карамельний соус", "price": 14 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Крем-суп з гарбуза",
+    "price": 145,
+    "description": "Ніжний суп-пюре з гарбуза та вершків.",
+    "category": "Обіди",
+    "imageSrc": "/dishes/sup.avif",
+    "rating": 4.6,
+    "reviewsCount": 173,
+    "addons": [
+      { "id": "pumpkin-seeds", "label": "Гарбузове насіння", "price": 10 },
+      { "id": "pumpkin-cream", "label": "Додаткові вершки", "price": 8 },
+      { "id": "pumpkin-croutons", "label": "Часникові грінки", "price": 14 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Паста Болоньєзе",
+    "price": 180,
+    "description": "Класична паста з м’ясним соусом.",
+    "category": "Обіди",
+    "imageSrc": "/dishes/pasta.avif",
+    "rating": 4.5,
+    "reviewsCount": 192,
+    "addons": [
+      { "id": "bolognese-parmesan", "label": "Пармезан", "price": 18 },
+      { "id": "bolognese-sauce", "label": "Додатковий соус", "price": 15 },
+      { "id": "bolognese-chili", "label": "Перець чилі", "price": 10 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Стейк курячий",
+    "price": 210,
+    "description": "Соковите куряче філе на грилі.",
+    "category": "Вечері",
+    "imageSrc": "/dishes/stake.avif",
+    "rating": 4.7,
+    "reviewsCount": 205,
+    "addons": [
+      { "id": "chicken-grill-veggies", "label": "Овочі гриль", "price": 22 },
+      { "id": "chicken-potato", "label": "Картопля по-домашньому", "price": 25 },
+      { "id": "chicken-ranch", "label": "Соус ранч", "price": 12 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Чізкейк",
+    "price": 140,
+    "description": "Класичний чізкейк з ягідним соусом.",
+    "category": "Десерти",
+    "imageSrc": "/dishes/cheezcake.avif",
+    "rating": 4.9,
+    "reviewsCount": 260,
+    "addons": [
+      { "id": "cheesecake-berry", "label": "Полуничний соус", "price": 14 },
+      { "id": "cheesecake-cream", "label": "Вершки", "price": 10 },
+      { "id": "cheesecake-raspberry", "label": "Малина", "price": 18 }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Лимонад",
+    "price": 75,
+    "description": "Домашній лимонад з м’ятою.",
+    "category": "Напої",
+    "imageSrc": "/dishes/limonad.avif",
+    "rating": 4.4,
+    "reviewsCount": 98,
+    "addons": [
+      { "id": "lemonade-raspberry", "label": "Малина", "price": 15 },
+      { "id": "lemonade-basil", "label": "Базилік", "price": 10 },
+      { "id": "lemonade-ginger", "label": "Імбир", "price": 8 }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Бургер класичний",
+    "price": 165,
+    "description": "Яловичина, сир чеддер, огірок, соус, булочка бріош.",
+    "category": "Бургери",
+    "imageSrc": "/dishes/burger.avif",
+    "rating": 4.6,
+    "reviewsCount": 221,
+    "addons": [
+      { "id": "burger-classic-cheddar", "label": "Додатковий чеддер", "price": 15 },
+      { "id": "burger-classic-onion", "label": "Смажена цибуля", "price": 12 },
+      { "id": "burger-classic-bbq", "label": "Соус BBQ", "price": 10 }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Бургер BBQ",
+    "price": 185,
+    "description": "Яловичина, бекон, соус BBQ, карамелізована цибуля.",
+    "category": "Бургери",
+    "imageSrc": "/dishes/bbqburger.avif",
+    "rating": 4.7,
+    "reviewsCount": 189,
+    "addons": [
+      { "id": "burger-bbq-bacon", "label": "Додатковий бекон", "price": 18 },
+      { "id": "burger-bbq-jalapeno", "label": "Халапеньйо", "price": 12 },
+      { "id": "burger-bbq-cheese", "label": "Додатковий сир", "price": 15 }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Піца Маргарита",
+    "price": 190,
+    "description": "Томатний соус, моцарела, базилік, оливкова олія.",
+    "category": "Піци",
+    "imageSrc": "/dishes/pizza.avif",
+    "rating": 4.8,
+    "reviewsCount": 240,
+    "addons": [
+      { "id": "pizza-marg-mozzarella", "label": "Додаткова моцарела", "price": 18 },
+      { "id": "pizza-marg-basil", "label": "Базилік", "price": 8 },
+      { "id": "pizza-marg-olives", "label": "Оливки", "price": 12 }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Піца Пепероні",
+    "price": 210,
+    "description": "Моцарела, томатний соус, салямі пепероні.",
+    "category": "Піци",
+    "imageSrc": "/dishes/peperoni.avif",
+    "rating": 4.9,
+    "reviewsCount": 310,
+    "addons": [
+      { "id": "pizza-pepperoni-extra", "label": "Додаткова пепероні", "price": 22 },
+      { "id": "pizza-pepperoni-jalapeno", "label": "Халапеньйо", "price": 12 },
+      { "id": "pizza-pepperoni-crust", "label": "Сирний бортик", "price": 28 }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Салат Цезар",
+    "price": 150,
+    "description": "Курка гриль, пармезан, крутони, соус цезар.",
+    "category": "Салати",
+    "imageSrc": "/dishes/cezar.avif",
+    "rating": 4.5,
+    "reviewsCount": 180,
+    "addons": [
+      { "id": "caesar-chicken", "label": "Додаткова курка", "price": 25 },
+      { "id": "caesar-bacon", "label": "Бекон", "price": 18 },
+      { "id": "caesar-parmesan", "label": "Пармезан", "price": 15 }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Салат Грецький",
+    "price": 145,
+    "description": "Фета, оливки, огірок, томати, оливкова олія.",
+    "category": "Салати",
+    "imageSrc": "/dishes/greecesalad.avif",
+    "rating": 4.4,
+    "reviewsCount": 142,
+    "addons": [
+      { "id": "greek-feta", "label": "Додаткова фета", "price": 20 },
+      { "id": "greek-olives", "label": "Оливки", "price": 12 },
+      { "id": "greek-pita", "label": "Піта", "price": 15 }
+    ]
+  }
+]
