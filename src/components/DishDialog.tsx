@@ -32,8 +32,16 @@ export default function DishDialog({
         role="dialog"
         aria-modal="true"
         aria-label={dish.name}
-        className="bg-background relative z-10 w-full max-w-4xl overflow-hidden rounded-3xl shadow-2xl sm:max-h-[90vh]"
+        className="relative z-10 w-full max-w-4xl overflow-hidden rounded-3xl border-2 border-zinc-200 bg-gradient-to-b from-white to-zinc-50 shadow-[0_20px_60px_rgba(0,0,0,0.35)] ring-1 ring-black/5 sm:max-h-[90vh]"
       >
+        <button
+          type="button"
+          onClick={onClose}
+          className="text-foreground absolute top-4 right-4 z-20 cursor-pointer rounded-full bg-white/90 px-3 py-2 text-sm font-semibold shadow-md backdrop-blur transition hover:bg-white"
+          aria-label="Закрити"
+        >
+          ✕
+        </button>
         <div className="grid gap-0 sm:grid-cols-[1.1fr_1fr]">
           <div className="relative min-h-[260px] overflow-hidden sm:max-h-[90vh] sm:min-h-[480px]">
             <Image
@@ -46,7 +54,7 @@ export default function DishDialog({
             />
           </div>
           <div className="flex max-h-[90vh] flex-col gap-4 overflow-y-auto p-5 sm:p-6">
-            <div className="flex items-start justify-between gap-3">
+            <div className="flex items-start gap-3">
               <div className="space-y-1">
                 <h2 className="text-lg leading-tight font-semibold">
                   {dish.name}
@@ -55,14 +63,6 @@ export default function DishDialog({
                   {dish.description}
                 </p>
               </div>
-              <button
-                type="button"
-                onClick={onClose}
-                className="text-muted-foreground hover:text-foreground ml-auto cursor-pointer rounded-full p-2 transition"
-                aria-label="Закрити"
-              >
-                ✕
-              </button>
             </div>
 
             <div className="space-y-2">
