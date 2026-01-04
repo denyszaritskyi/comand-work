@@ -21,3 +21,15 @@ export type Dish = {
   reviewsCount: number
   addons?: AddonOption[]
 }
+
+export type CartItem = {
+  key: string
+  dishId: number
+  name: string
+  imageSrc: string
+  sizeId: string
+  sizeLabel: string
+  addons: AddonOption[]
+  unitPrice: number
+  quantity: number
+}
