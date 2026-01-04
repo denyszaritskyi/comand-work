@@ -10,6 +10,7 @@ type Props = {
   onToggleAddon: (id: string) => void
   totalPrice: number
   onClose: () => void
+  onAddToCart: () => void
 }
 
 export default function DishDialog({
@@ -21,6 +22,7 @@ export default function DishDialog({
   onToggleAddon,
   totalPrice,
   onClose,
+  onAddToCart,
 }: Props) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-6">
@@ -123,6 +125,7 @@ export default function DishDialog({
               <button
                 type="button"
                 className="bg-foreground text-background hover:bg-foreground/90 focus-visible:ring-ring inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold shadow transition focus-visible:ring-2 focus-visible:outline-none"
+                onClick={onAddToCart}
               >
                 Додати в кошик
               </button>

@@ -1,14 +1,9 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import dishesData from '@/data/dishes.json'
-import type { Dish, SizeOption } from '@/types/menu'
-
-const sizeOptions: SizeOption[] = [
-  { id: 's', label: 'Маленька', delta: -20 },
-  { id: 'm', label: 'Стандарт', delta: 0 },
-  { id: 'l', label: 'Велика', delta: 35 },
-]
+import { sizeOptions } from '@/data/sizeOptions'
+import type { Dish } from '@/types/menu'
 
 const dishes: Dish[] = dishesData
 
@@ -19,17 +14,6 @@ export function useHomePage() {
   const [activeDish, setActiveDish] = useState<Dish | null>(null)
   const [selectedSize, setSelectedSize] = useState<string>('m')
   const [selectedAddons, setSelectedAddons] = useState<Set<string>>(new Set())
-
-  useEffect(() => {
-    if (activeDish) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [activeDish])
 
   const categories = useMemo(
     () => ['Всі', ...Array.from(new Set(dishes.map((d) => d.category)))],
