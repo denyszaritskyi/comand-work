@@ -53,7 +53,9 @@ export default function MenuCard({
           </span>
         </div>
         <div className="flex items-center gap-2 text-xs font-semibold text-amber-600">
-          <span aria-label="Рейтинг">★ {rating.toFixed(1)}</span>
+          <span aria-label="Рейтинг">
+            ★ {(typeof rating === 'number' ? rating : 0).toFixed(1)}
+          </span>
           <span className="text-muted-foreground text-[11px] font-medium">
             ({reviewsCount})
           </span>

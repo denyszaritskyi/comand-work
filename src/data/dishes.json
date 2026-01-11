@@ -1,5 +1,19 @@
 [
   {
+    "name": "Салат",
+    "price": 120,
+    "category": "Салати",
+    "imageSrc": "/dishes/cezar.avif",
+    "addons": [
+      {
+        "id": "соус-1767689703534",
+        "label": "соус",
+        "price": 20
+      }
+    ],
+    "id": 1767689704903
+  },
+  {
     "id": 1,
     "name": "Омлет з зеленню",
     "price": 95,
@@ -9,9 +23,21 @@
     "rating": 4.7,
     "reviewsCount": 128,
     "addons": [
-      { "id": "omelet-feta", "label": "Сир фета", "price": 18 },
-      { "id": "omelet-tomato", "label": "Свіжі томати", "price": 12 },
-      { "id": "omelet-avocado", "label": "Авокадо", "price": 20 }
+      {
+        "id": "omelet-feta",
+        "label": "Сир фета",
+        "price": 18
+      },
+      {
+        "id": "omelet-tomato",
+        "label": "Свіжі томати",
+        "price": 12
+      },
+      {
+        "id": "omelet-avocado",
+        "label": "Авокадо",
+        "price": 20
+      }
     ]
   },
   {
@@ -24,9 +50,21 @@
     "rating": 4.8,
     "reviewsCount": 214,
     "addons": [
-      { "id": "syrnyky-berries", "label": "Ягідний мікс", "price": 18 },
-      { "id": "syrnyky-honey", "label": "Мед", "price": 12 },
-      { "id": "syrnyky-caramel", "label": "Карамельний соус", "price": 14 }
+      {
+        "id": "syrnyky-berries",
+        "label": "Ягідний мікс",
+        "price": 18
+      },
+      {
+        "id": "syrnyky-honey",
+        "label": "Мед",
+        "price": 12
+      },
+      {
+        "id": "syrnyky-caramel",
+        "label": "Карамельний соус",
+        "price": 14
+      }
     ]
   },
   {
@@ -39,9 +77,21 @@
     "rating": 4.6,
     "reviewsCount": 173,
     "addons": [
-      { "id": "pumpkin-seeds", "label": "Гарбузове насіння", "price": 10 },
-      { "id": "pumpkin-cream", "label": "Додаткові вершки", "price": 8 },
-      { "id": "pumpkin-croutons", "label": "Часникові грінки", "price": 14 }
+      {
+        "id": "pumpkin-seeds",
+        "label": "Гарбузове насіння",
+        "price": 10
+      },
+      {
+        "id": "pumpkin-cream",
+        "label": "Додаткові вершки",
+        "price": 8
+      },
+      {
+        "id": "pumpkin-croutons",
+        "label": "Часникові грінки",
+        "price": 14
+      }
     ]
   },
   {
@@ -54,9 +104,21 @@
     "rating": 4.5,
     "reviewsCount": 192,
     "addons": [
-      { "id": "bolognese-parmesan", "label": "Пармезан", "price": 18 },
-      { "id": "bolognese-sauce", "label": "Додатковий соус", "price": 15 },
-      { "id": "bolognese-chili", "label": "Перець чилі", "price": 10 }
+      {
+        "id": "bolognese-parmesan",
+        "label": "Пармезан",
+        "price": 18
+      },
+      {
+        "id": "bolognese-sauce",
+        "label": "Додатковий соус",
+        "price": 15
+      },
+      {
+        "id": "bolognese-chili",
+        "label": "Перець чилі",
+        "price": 10
+      }
     ]
   },
   {
@@ -69,9 +131,21 @@
     "rating": 4.7,
     "reviewsCount": 205,
     "addons": [
-      { "id": "chicken-grill-veggies", "label": "Овочі гриль", "price": 22 },
-      { "id": "chicken-potato", "label": "Картопля по-домашньому", "price": 25 },
-      { "id": "chicken-ranch", "label": "Соус ранч", "price": 12 }
+      {
+        "id": "chicken-grill-veggies",
+        "label": "Овочі гриль",
+        "price": 22
+      },
+      {
+        "id": "chicken-potato",
+        "label": "Картопля по-домашньому",
+        "price": 25
+      },
+      {
+        "id": "chicken-ranch",
+        "label": "Соус ранч",
+        "price": 12
+      }
     ]
   },
   {
@@ -84,9 +158,21 @@
     "rating": 4.9,
     "reviewsCount": 260,
     "addons": [
-      { "id": "cheesecake-berry", "label": "Полуничний соус", "price": 14 },
-      { "id": "cheesecake-cream", "label": "Вершки", "price": 10 },
-      { "id": "cheesecake-raspberry", "label": "Малина", "price": 18 }
+      {
+        "id": "cheesecake-berry",
+        "label": "Полуничний соус",
+        "price": 14
+      },
+      {
+        "id": "cheesecake-cream",
+        "label": "Вершки",
+        "price": 10
+      },
+      {
+        "id": "cheesecake-raspberry",
+        "label": "Малина",
+        "price": 18
+      }
     ]
   },
   {
@@ -99,9 +185,21 @@
     "rating": 4.4,
     "reviewsCount": 98,
     "addons": [
-      { "id": "lemonade-raspberry", "label": "Малина", "price": 15 },
-      { "id": "lemonade-basil", "label": "Базилік", "price": 10 },
-      { "id": "lemonade-ginger", "label": "Імбир", "price": 8 }
+      {
+        "id": "lemonade-raspberry",
+        "label": "Малина",
+        "price": 15
+      },
+      {
+        "id": "lemonade-basil",
+        "label": "Базилік",
+        "price": 10
+      },
+      {
+        "id": "lemonade-ginger",
+        "label": "Імбир",
+        "price": 8
+      }
     ]
   },
   {
@@ -114,9 +212,21 @@
     "rating": 4.6,
     "reviewsCount": 221,
     "addons": [
-      { "id": "burger-classic-cheddar", "label": "Додатковий чеддер", "price": 15 },
-      { "id": "burger-classic-onion", "label": "Смажена цибуля", "price": 12 },
-      { "id": "burger-classic-bbq", "label": "Соус BBQ", "price": 10 }
+      {
+        "id": "burger-classic-cheddar",
+        "label": "Додатковий чеддер",
+        "price": 15
+      },
+      {
+        "id": "burger-classic-onion",
+        "label": "Смажена цибуля",
+        "price": 12
+      },
+      {
+        "id": "burger-classic-bbq",
+        "label": "Соус BBQ",
+        "price": 10
+      }
     ]
   },
   {
@@ -129,9 +239,21 @@
     "rating": 4.7,
     "reviewsCount": 189,
     "addons": [
-      { "id": "burger-bbq-bacon", "label": "Додатковий бекон", "price": 18 },
-      { "id": "burger-bbq-jalapeno", "label": "Халапеньйо", "price": 12 },
-      { "id": "burger-bbq-cheese", "label": "Додатковий сир", "price": 15 }
+      {
+        "id": "burger-bbq-bacon",
+        "label": "Додатковий бекон",
+        "price": 18
+      },
+      {
+        "id": "burger-bbq-jalapeno",
+        "label": "Халапеньйо",
+        "price": 12
+      },
+      {
+        "id": "burger-bbq-cheese",
+        "label": "Додатковий сир",
+        "price": 15
+      }
     ]
   },
   {
@@ -144,9 +266,21 @@
     "rating": 4.8,
     "reviewsCount": 240,
     "addons": [
-      { "id": "pizza-marg-mozzarella", "label": "Додаткова моцарела", "price": 18 },
-      { "id": "pizza-marg-basil", "label": "Базилік", "price": 8 },
-      { "id": "pizza-marg-olives", "label": "Оливки", "price": 12 }
+      {
+        "id": "pizza-marg-mozzarella",
+        "label": "Додаткова моцарела",
+        "price": 18
+      },
+      {
+        "id": "pizza-marg-basil",
+        "label": "Базилік",
+        "price": 8
+      },
+      {
+        "id": "pizza-marg-olives",
+        "label": "Оливки",
+        "price": 12
+      }
     ]
   },
   {
@@ -159,9 +293,21 @@
     "rating": 4.9,
     "reviewsCount": 310,
     "addons": [
-      { "id": "pizza-pepperoni-extra", "label": "Додаткова пепероні", "price": 22 },
-      { "id": "pizza-pepperoni-jalapeno", "label": "Халапеньйо", "price": 12 },
-      { "id": "pizza-pepperoni-crust", "label": "Сирний бортик", "price": 28 }
+      {
+        "id": "pizza-pepperoni-extra",
+        "label": "Додаткова пепероні",
+        "price": 22
+      },
+      {
+        "id": "pizza-pepperoni-jalapeno",
+        "label": "Халапеньйо",
+        "price": 12
+      },
+      {
+        "id": "pizza-pepperoni-crust",
+        "label": "Сирний бортик",
+        "price": 28
+      }
     ]
   },
   {
@@ -174,9 +320,21 @@
     "rating": 4.5,
     "reviewsCount": 180,
     "addons": [
-      { "id": "caesar-chicken", "label": "Додаткова курка", "price": 25 },
-      { "id": "caesar-bacon", "label": "Бекон", "price": 18 },
-      { "id": "caesar-parmesan", "label": "Пармезан", "price": 15 }
+      {
+        "id": "caesar-chicken",
+        "label": "Додаткова курка",
+        "price": 25
+      },
+      {
+        "id": "caesar-bacon",
+        "label": "Бекон",
+        "price": 18
+      },
+      {
+        "id": "caesar-parmesan",
+        "label": "Пармезан",
+        "price": 15
+      }
     ]
   },
   {
@@ -189,9 +347,71 @@
     "rating": 4.4,
     "reviewsCount": 142,
     "addons": [
-      { "id": "greek-feta", "label": "Додаткова фета", "price": 20 },
-      { "id": "greek-olives", "label": "Оливки", "price": 12 },
-      { "id": "greek-pita", "label": "Піта", "price": 15 }
+      {
+        "id": "greek-feta",
+        "label": "Додаткова фета",
+        "price": 20
+      },
+      {
+        "id": "greek-olives",
+        "label": "Оливки",
+        "price": 12
+      },
+      {
+        "id": "greek-pita",
+        "label": "Піта",
+        "price": 15
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "name": "Паста Карбонара",
+    "price": 160,
+    "category": "Паста",
+    "rating": 4.8,
+    "imageSrc": "/dishes/carbonara.avif",
+    "addons": [
+      {
+        "id": "carbo-parmesan",
+        "label": "Пармезан",
+        "price": 15
+      },
+      {
+        "id": "carbo-bacon",
+        "label": "Додатковий бекон",
+        "price": 17
+      },
+      {
+        "id": "carbo-egg",
+        "label": "Яйце пашот",
+        "price": 14
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "name": "Лосось на грилі",
+    "price": 230,
+    "category": "Вечері",
+    "rating": 4.9,
+    "imageSrc": "/dishes/salmon.avif",
+    "addons": [
+      {
+        "id": "salmon-lemon",
+        "label": "Лимон",
+        "price": 8
+      },
+      {
+        "id": "salmon-sauce",
+        "label": "Соус тартар",
+        "price": 18
+      },
+      {
+        "id": "salmon-spinach",
+        "label": "Шпинат",
+        "price": 14
+      }
     ]
   }
 ]
