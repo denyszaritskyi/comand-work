@@ -1,0 +1,261 @@
+[
+  {
+    "id": "1768587203010",
+    "createdAt": 1768587203010,
+    "items": [
+      {
+        "key": "5-m-",
+        "dishId": 5,
+        "name": "Стейк курячий",
+        "imageSrc": "/dishes/stake.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1
+      },
+      {
+        "key": "9-m-",
+        "dishId": 9,
+        "name": "Бургер BBQ",
+        "imageSrc": "/dishes/bbqburger.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 185,
+        "quantity": 1
+      }
+    ],
+    "total": 395,
+    "status": "cancelled",
+    "stoppedAt": 1768589007012
+  },
+  {
+    "id": "1768589079651",
+    "createdAt": 1768589079651,
+    "items": [
+      {
+        "key": "11-m-",
+        "dishId": 11,
+        "name": "Піца Пепероні",
+        "imageSrc": "/dishes/peperoni.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1
+      },
+      {
+        "key": "5-m-",
+        "dishId": 5,
+        "name": "Стейк курячий",
+        "imageSrc": "/dishes/stake.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1
+      }
+    ],
+    "total": 420,
+    "status": "completed",
+    "stoppedAt": 1768589097335
+  },
+  {
+    "id": "1768589148803",
+    "createdAt": 1768589148803,
+    "items": [
+      {
+        "key": "15-m-",
+        "dishId": "15",
+        "name": "Лосось на грилі",
+        "imageSrc": "/dishes/salmon.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 230,
+        "quantity": 1
+      },
+      {
+        "key": "10-m-pizza-marg-basil",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [
+          {
+            "id": "pizza-marg-basil",
+            "label": "Базилік",
+            "price": 8
+          }
+        ],
+        "unitPrice": 198,
+        "quantity": 1
+      }
+    ],
+    "total": 428,
+    "status": "cancelled",
+    "stoppedAt": 1768589160800
+  },
+  {
+    "id": "1768645228925",
+    "createdAt": 1768645228925,
+    "items": [
+      {
+        "key": "5-m-chicken-potato",
+        "dishId": 5,
+        "name": "Стейк курячий",
+        "imageSrc": "/dishes/stake.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [
+          {
+            "id": "chicken-potato",
+            "label": "Картопля по-домашньому",
+            "price": 25
+          }
+        ],
+        "unitPrice": 235,
+        "quantity": 1
+      }
+    ],
+    "total": 235,
+    "status": "cancelled",
+    "stoppedAt": 1768645270936
+  },
+  {
+    "id": "1768646386446",
+    "createdAt": 1768646386446,
+    "items": [
+      {
+        "key": "10-m-pizza-marg-olives",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [
+          {
+            "id": "pizza-marg-olives",
+            "label": "Оливки",
+            "price": 12
+          }
+        ],
+        "unitPrice": 202,
+        "quantity": 1
+      }
+    ],
+    "total": 202,
+    "status": "completed",
+    "customerName": "Денис",
+    "customerPhone": "06732132412",
+    "stoppedAt": 1768646409251
+  },
+  {
+    "id": "1768646494524",
+    "createdAt": 1768646494524,
+    "items": [
+      {
+        "key": "10-m-",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 190,
+        "quantity": 1
+      }
+    ],
+    "total": 190,
+    "status": "completed",
+    "customerName": "Денис",
+    "customerPhone": "0674242412",
+    "stoppedAt": 1768647237140
+  },
+  {
+    "id": "1768647264990",
+    "createdAt": 1768647264990,
+    "items": [
+      {
+        "key": "11-m-",
+        "dishId": 11,
+        "name": "Піца Пепероні",
+        "imageSrc": "/dishes/peperoni.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1
+      }
+    ],
+    "total": 210,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768647271437
+  },
+  {
+    "id": "1768648807407",
+    "createdAt": 1768648807407,
+    "items": [
+      {
+        "key": "10-m-",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 190,
+        "quantity": 1
+      }
+    ],
+    "total": 190,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768648833765
+  },
+  {
+    "id": "1768648880991",
+    "createdAt": 1768648880991,
+    "items": [
+      {
+        "key": "10-m-",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 190,
+        "quantity": 1
+      }
+    ],
+    "total": 190,
+    "status": "cancelled",
+    "tableNumber": "1",
+    "stoppedAt": 1768648892069
+  },
+  {
+    "id": "1768649066775",
+    "createdAt": 1768649066775,
+    "items": [
+      {
+        "key": "11-m-",
+        "dishId": 11,
+        "name": "Піца Пепероні",
+        "imageSrc": "/dishes/peperoni.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1
+      }
+    ],
+    "total": 210,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768649072644
+  }
+]

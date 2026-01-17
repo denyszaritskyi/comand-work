@@ -13,16 +13,26 @@ type AddToCartPayload = {
 
 type CartStore = {
   items: CartItem[]
+  tableId: string | null // <--- НОВЕ ПОЛЕ
+  setTableId: (id: string) => void // <--- НОВА ДІЯ
   addToCart: (payload: AddToCartPayload) => void
   removeFromCart: (key: string) => void
   updateQuantity: (key: string, quantity: number) => void
   clearCart: () => void
 }
 
-const storage = createJSONStorage(() =>
-  typeof window !== 'undefined' ? window.localStorage : undefined
-)
+const storage = createJSONStorage(() => {
+  if (typeof window !== 'undefined') {
+    return window.localStorage
+  }
+  return {
+    getItem: () => null,
+    setItem: () => {},
+    removeItem: () => {},
+  }
+})
 
+// ... (функції getUnitPrice та buildKey залишаються без змін) ...
 const getUnitPrice = (
   dish: Dish,
   size?: SizeOption,
@@ -49,6 +59,9 @@ export const useCartStore = create<CartStore>()(
   persist(
     (set) => ({
       items: [],
+      tableId: null, // Початкове значення
+      setTableId: (id) => set({ tableId: id }), // Функція встановлення
+
       addToCart: ({ dish, size, addons = [], quantity = 1 }) => {
         const sizeLabel = size?.label ?? 'Стандарт'
         const sizeId = size?.id ?? 'default'
@@ -97,12 +110,12 @@ export const useCartStore = create<CartStore>()(
             ),
           }
         }),
-      clearCart: () => set({ items: [] }),
+      clearCart: () => set({ items: [] }), // tableId не очищуємо, бо людина все ще за столом
     }),
     {
       name: 'cart-storage',
       storage,
-      partialize: (state) => ({ items: state.items }),
+      partialize: (state) => ({ items: state.items, tableId: state.tableId }), // Зберігаємо tableId
     }
   )
 )

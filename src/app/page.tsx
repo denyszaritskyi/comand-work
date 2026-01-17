@@ -1,7 +1,8 @@
 'use client'
 
 import { ShoppingCart } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, Suspense } from 'react' // Додали Suspense
+import { useSearchParams } from 'next/navigation' // Додали useSearchParams
 import CategoryNav from '@/components/CategoryNav'
 import CartDrawer from '@/components/CartDrawer'
 import DishDialog from '@/components/DishDialog'
@@ -11,9 +12,25 @@ import MenuCard from '@/components/MenuCard'
 import { useHomePage } from '@/components/useHomePage'
 import { useCartStore } from '@/store/cartStore'
 
+// Створюємо компонент-обгортку, який читає параметри (вимога Next.js)
+function TableSetter() {
+  const searchParams = useSearchParams()
+  const { setTableId } = useCartStore()
+
+  useEffect(() => {
+    const table = searchParams.get('table')
+    if (table) {
+      setTableId(table)
+    }
+  }, [searchParams, setTableId])
+
+  return null
+}
+
 export default function Home() {
   const { addToCart, items } = useCartStore()
   const [isCartOpen, setIsCartOpen] = useState(false)
+  // ... (весь код useHomePage без змін) ...
   const {
     categories,
     selectedCategory,
@@ -38,10 +55,6 @@ export default function Home() {
     () => items.reduce((sum, item) => sum + item.quantity, 0),
     [items]
   )
-  const cartTotal = useMemo(
-    () => items.reduce((sum, item) => sum + item.quantity * item.unitPrice, 0),
-    [items]
-  )
 
   useEffect(() => {
     if (activeDish || isCartOpen) {
@@ -49,28 +62,25 @@ export default function Home() {
     } else {
       document.body.style.overflow = ''
     }
-
     return () => {
       document.body.style.overflow = ''
     }
   }, [activeDish, isCartOpen])
 
+  // ... (handleAddFromDialog та handleQuickAdd без змін) ...
   const handleAddFromDialog = () => {
     if (!activeDish) return
-
     const selectedSizeOption =
       sizeOptions.find((option) => option.id === selectedSize) ?? sizeOptions[0]
     const addons = (activeDish.addons ?? []).filter((addon) =>
       selectedAddons.has(addon.id)
     )
-
     addToCart({
       dish: activeDish,
       size: selectedSizeOption,
       addons,
       quantity: 1,
     })
-
     closeDialog()
   }
 
@@ -82,6 +92,11 @@ export default function Home() {
 
   return (
     <div className="text-foreground min-h-screen bg-zinc-50 font-sans">
+      {/* Читаємо номер столу */}
+      <Suspense fallback={null}>
+        <TableSetter />
+      </Suspense>
+
       <HeroHeader />
 
       <main className="mx-auto max-w-6xl px-4 pb-12 sm:px-6 lg:px-8">
@@ -115,6 +130,7 @@ export default function Home() {
         </section>
       </main>
 
+      {/* ... (решта коду Dialog і CartDrawer без змін) ... */}
       {activeDish ? (
         <DishDialog
           dish={activeDish}

@@ -33,3 +33,21 @@ export type CartItem = {
   unitPrice: number
   quantity: number
 }
+
+export type OrderStatus =
+  | 'new'
+  | 'cooking'
+  | 'ready'
+  | 'completed'
+  | 'cancelled'
+
+export type Order = {
+  id: string
+  createdAt: number // timestamp
+  stoppedAt?: number
+  items: CartItem[]
+  total: number
+  status: OrderStatus
+  tableNumber: string
+  paymentMethod?: 'cash' | 'card' // на майбутнє
+}
