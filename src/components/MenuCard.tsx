@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import type { KeyboardEvent } from 'react'
+import type { KeyboardEvent, MouseEvent } from 'react'
 
 type Props = {
   imageSrc: string
@@ -9,6 +9,7 @@ type Props = {
   rating: number
   reviewsCount: number
   onSelect?: () => void
+  onAddToCart?: () => void
 }
 
 export default function MenuCard({
@@ -19,12 +20,18 @@ export default function MenuCard({
   rating,
   reviewsCount,
   onSelect,
+  onAddToCart,
 }: Props) {
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault()
       onSelect?.()
     }
+  }
+
+  const handleAddClick = (event: MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation()
+    onAddToCart?.()
   }
 
   return (
@@ -53,7 +60,9 @@ export default function MenuCard({
           </span>
         </div>
         <div className="flex items-center gap-2 text-xs font-semibold text-amber-600">
-          <span aria-label="Рейтинг">★ {rating.toFixed(1)}</span>
+          <span aria-label="Рейтинг">
+            ★ {(typeof rating === 'number' ? rating : 0).toFixed(1)}
+          </span>
           <span className="text-muted-foreground text-[11px] font-medium">
             ({reviewsCount})
           </span>
@@ -64,6 +73,7 @@ export default function MenuCard({
         <button
           type="button"
           className="bg-foreground text-background hover:bg-foreground/90 focus-visible:ring-ring mt-auto flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold shadow-sm transition focus-visible:ring-2 focus-visible:outline-none"
+          onClick={handleAddClick}
         >
           Додати в кошик
         </button>
