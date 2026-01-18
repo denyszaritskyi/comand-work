@@ -57,7 +57,7 @@ const TOOLTIP_LABEL_STYLE = {
   fontWeight: 600,
 }
 
-type Period = 'week' | 'month' | 'custom'
+type Period = 'week' | 'month' | 'custom' | 'day'
 
 type StatCard = {
   title: string
@@ -71,6 +71,12 @@ function toMonthInputValue(date: Date) {
   return `${date.getFullYear()}-${month}`
 }
 
+function toDayInputValue(date: Date) {
+  const day = `${date.getDate()}`.padStart(2, '0')
+  const month = `${date.getMonth() + 1}`.padStart(2, '0')
+  return `${date.getFullYear()}-${month}-${day}`
+}
+
 function getDateKey(date: Date) {
   return date.toISOString().slice(0, 10)
 }
@@ -82,10 +88,17 @@ function getDateLabel(date: Date) {
   })
 }
 
-function getRange(period: Period, customMonth: string) {
+function getRange(period: Period, customMonth: string, customDay: string) {
   const now = new Date()
   const end = new Date(now)
   end.setHours(23, 59, 59, 999)
+
+  if (period === 'day' && customDay) {
+    const [year, month, day] = customDay.split('-').map(Number)
+    const start = new Date(year, month - 1, day, 0, 0, 0, 0)
+    const endOfDay = new Date(year, month - 1, day, 23, 59, 59, 999)
+    return { start, end: endOfDay }
+  }
 
   if (period === 'week') {
     const start = new Date(now)
@@ -124,6 +137,9 @@ export default function AdminAnalytics() {
   const [customMonth, setCustomMonth] = React.useState<string>(() =>
     toMonthInputValue(new Date())
   )
+  const [customDay, setCustomDay] = React.useState<string>(() =>
+    toDayInputValue(new Date())
+  )
   const [loading, setLoading] = React.useState(true)
 
   React.useEffect(() => {
@@ -144,8 +160,8 @@ export default function AdminAnalytics() {
   }, [])
 
   const { start, end } = React.useMemo(
-    () => getRange(period, customMonth),
-    [period, customMonth]
+    () => getRange(period, customMonth, customDay),
+    [period, customMonth, customDay]
   )
 
   const filteredOrders = React.useMemo(() => {
@@ -324,10 +340,20 @@ export default function AdminAnalytics() {
               onChange={(event) => setPeriod(event.target.value as Period)}
               className="rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm"
             >
+              <option value="day">Конкретний день</option>
               <option value="week">Останні 7 днів</option>
               <option value="month">Поточний місяць</option>
               <option value="custom">Обрати місяць</option>
             </select>
+
+            {period === 'day' && (
+              <input
+                type="date"
+                value={customDay}
+                onChange={(event) => setCustomDay(event.target.value)}
+                className="rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 shadow-sm"
+              />
+            )}
 
             {period === 'custom' && (
               <input
