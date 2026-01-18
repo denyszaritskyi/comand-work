@@ -1,27 +1,5 @@
 [
   {
-    "name": "Салат",
-    "price": 120,
-    "category": "Салати",
-    "imageSrc": "/dishes/cezar.avif",
-    "description": "",
-    "rating": 5,
-    "reviewsCount": 0,
-    "addons": [
-      {
-        "id": "соус-1767689703534",
-        "label": "соус",
-        "price": 20
-      },
-      {
-        "id": "чедр-1768421565783",
-        "label": "Чедр",
-        "price": 35
-      }
-    ],
-    "id": 1767689704903
-  },
-  {
     "id": 1,
     "name": "Омлет з зеленню",
     "price": 95,
