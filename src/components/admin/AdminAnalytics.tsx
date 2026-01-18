@@ -14,8 +14,8 @@ import {
 } from 'lucide-react'
 import {
   ResponsiveContainer,
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -34,6 +34,27 @@ const STATUS_COLORS: Record<string, string> = {
   new: '#0ea5e9',
   cooking: '#f59e0b',
   ready: '#8b5cf6',
+}
+
+const STATUS_LABELS: Record<string, string> = {
+  completed: 'Виконано',
+  cancelled: 'Скасовано',
+  new: 'Нові',
+  cooking: 'Готуються',
+  ready: 'Готові',
+}
+
+const TOOLTIP_STYLE = {
+  backgroundColor: '#ffffff',
+  border: '1px solid #e2e8f0',
+  borderRadius: '12px',
+  fontSize: '12px',
+  boxShadow: '0 10px 30px rgba(15, 23, 42, 0.08)',
+}
+
+const TOOLTIP_LABEL_STYLE = {
+  color: '#0f172a',
+  fontWeight: 600,
 }
 
 type Period = 'week' | 'month' | 'custom'
@@ -91,6 +112,10 @@ function getRange(period: Period, customMonth: string) {
     999
   )
   return { start, end: endOfMonth }
+}
+
+function getStatusLabel(status: string) {
+  return STATUS_LABELS[status] || status
 }
 
 export default function AdminAnalytics() {
@@ -315,31 +340,6 @@ export default function AdminAnalytics() {
           </div>
         </section>
 
-        <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {statCards.map((card) => (
-            <div
-              key={card.title}
-              className="rounded-3xl border border-zinc-100 bg-white p-5 shadow-sm"
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-xs font-bold tracking-widest text-zinc-400 uppercase">
-                    {card.title}
-                  </p>
-                  <p className="mt-2 text-3xl font-extrabold text-zinc-900">
-                    {card.value}
-                  </p>
-                </div>
-                <div
-                  className={`flex h-12 w-12 items-center justify-center rounded-2xl border ${card.accentClass}`}
-                >
-                  {card.icon}
-                </div>
-              </div>
-            </div>
-          ))}
-        </section>
-
         <section className="mt-6 grid gap-6 lg:grid-cols-[2fr_1fr]">
           <div className="rounded-3xl border border-zinc-100 bg-white p-5 shadow-sm">
             <div className="mb-4 flex items-center justify-between">
@@ -357,35 +357,97 @@ export default function AdminAnalytics() {
             ) : (
               <div className="h-72">
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart
+                  <AreaChart
                     data={chartData}
-                    margin={{ top: 10, right: 20, left: 0, bottom: 0 }}
+                    margin={{ top: 10, right: 24, left: 0, bottom: 0 }}
                   >
-                    <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-                    <XAxis dataKey="date" tick={{ fontSize: 11 }} />
-                    <YAxis tick={{ fontSize: 11 }} />
+                    <defs>
+                      <linearGradient
+                        id="ordersArea"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1"
+                      >
+                        <stop
+                          offset="0%"
+                          stopColor="#2563eb"
+                          stopOpacity={0.35}
+                        />
+                        <stop
+                          offset="100%"
+                          stopColor="#2563eb"
+                          stopOpacity={0.05}
+                        />
+                      </linearGradient>
+                      <linearGradient
+                        id="revenueArea"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1"
+                      >
+                        <stop
+                          offset="0%"
+                          stopColor="#10b981"
+                          stopOpacity={0.35}
+                        />
+                        <stop
+                          offset="100%"
+                          stopColor="#10b981"
+                          stopOpacity={0.05}
+                        />
+                      </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="6 6" stroke="#e2e8f0" />
+                    <XAxis
+                      dataKey="date"
+                      tick={{ fontSize: 11, fill: '#64748b' }}
+                      axisLine={false}
+                      tickLine={false}
+                    />
+                    <YAxis
+                      yAxisId="orders"
+                      tick={{ fontSize: 11, fill: '#64748b' }}
+                      axisLine={false}
+                      tickLine={false}
+                    />
+                    <YAxis
+                      yAxisId="revenue"
+                      orientation="right"
+                      tick={{ fontSize: 11, fill: '#64748b' }}
+                      axisLine={false}
+                      tickLine={false}
+                    />
                     <Tooltip
+                      contentStyle={TOOLTIP_STYLE}
+                      labelStyle={TOOLTIP_LABEL_STYLE}
+                      cursor={{ stroke: '#e2e8f0', strokeDasharray: '4 4' }}
                       formatter={(value: number, name) =>
                         name === 'revenue'
                           ? [`${value} ₴`, 'Дохід']
                           : [value, 'Замовлення']
                       }
                     />
-                    <Line
+                    <Area
+                      yAxisId="orders"
                       type="monotone"
                       dataKey="orders"
-                      stroke="#0ea5e9"
-                      strokeWidth={3}
-                      dot={{ r: 3 }}
+                      stroke="#2563eb"
+                      strokeWidth={2.5}
+                      fill="url(#ordersArea)"
+                      activeDot={{ r: 4 }}
                     />
-                    <Line
+                    <Area
+                      yAxisId="revenue"
                       type="monotone"
                       dataKey="revenue"
-                      stroke="#22c55e"
-                      strokeWidth={3}
-                      dot={{ r: 3 }}
+                      stroke="#10b981"
+                      strokeWidth={2.5}
+                      fill="url(#revenueArea)"
+                      activeDot={{ r: 4 }}
                     />
-                  </LineChart>
+                  </AreaChart>
                 </ResponsiveContainer>
               </div>
             )}
@@ -410,37 +472,44 @@ export default function AdminAnalytics() {
                       data={statusData}
                       dataKey="value"
                       nameKey="status"
-                      innerRadius={50}
-                      outerRadius={80}
-                      paddingAngle={4}
+                      innerRadius={60}
+                      outerRadius={90}
+                      paddingAngle={3}
+                      stroke="#ffffff"
+                      strokeWidth={2}
                     >
                       {statusData.map((entry) => (
                         <Cell key={entry.status} fill={entry.color} />
                       ))}
                     </Pie>
                     <Tooltip
-                      formatter={(value: number) => [value, 'Замовлень']}
+                      contentStyle={TOOLTIP_STYLE}
+                      labelStyle={TOOLTIP_LABEL_STYLE}
+                      formatter={(value: number, name) => [
+                        value,
+                        getStatusLabel(String(name)),
+                      ]}
                     />
                   </PieChart>
                 </ResponsiveContainer>
               </div>
             )}
-            <div className="mt-4 space-y-2 text-sm">
+            <div className="mt-4 grid gap-2 text-sm">
               {statusData.map((entry) => (
                 <div
                   key={entry.status}
-                  className="flex items-center justify-between"
+                  className="flex items-center justify-between rounded-2xl border border-zinc-100 bg-zinc-50 px-3 py-2"
                 >
                   <div className="flex items-center gap-2">
                     <span
                       className="h-2.5 w-2.5 rounded-full"
                       style={{ backgroundColor: entry.color }}
                     />
-                    <span className="text-zinc-600 capitalize">
-                      {entry.status}
+                    <span className="font-semibold text-zinc-700">
+                      {getStatusLabel(entry.status)}
                     </span>
                   </div>
-                  <span className="font-semibold text-zinc-900">
+                  <span className="rounded-full border border-zinc-200 bg-white px-2.5 py-1 text-xs font-bold text-zinc-700">
                     {entry.value}
                   </span>
                 </div>
@@ -463,21 +532,85 @@ export default function AdminAnalytics() {
           ) : (
             <div className="h-72">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart
+                <AreaChart
                   data={chartData}
                   margin={{ top: 10, right: 20, left: 0, bottom: 0 }}
                 >
-                  <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-                  <XAxis dataKey="date" tick={{ fontSize: 11 }} />
-                  <YAxis tick={{ fontSize: 11 }} />
+                  <defs>
+                    <linearGradient
+                      id="revenueOnlyArea"
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#22c55e"
+                        stopOpacity={0.35}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#16a34a"
+                        stopOpacity={0.05}
+                      />
+                    </linearGradient>
+                  </defs>
+                  <CartesianGrid strokeDasharray="6 6" stroke="#e2e8f0" />
+                  <XAxis
+                    dataKey="date"
+                    tick={{ fontSize: 11, fill: '#64748b' }}
+                    axisLine={false}
+                    tickLine={false}
+                  />
+                  <YAxis
+                    tick={{ fontSize: 11, fill: '#64748b' }}
+                    axisLine={false}
+                    tickLine={false}
+                  />
                   <Tooltip
+                    contentStyle={TOOLTIP_STYLE}
+                    labelStyle={TOOLTIP_LABEL_STYLE}
+                    cursor={{ stroke: '#e2e8f0', strokeDasharray: '4 4' }}
                     formatter={(value: number) => [`${value} ₴`, 'Дохід']}
                   />
-                  <Bar dataKey="revenue" fill="#22c55e" radius={[8, 8, 0, 0]} />
-                </BarChart>
+                  <Area
+                    type="monotone"
+                    dataKey="revenue"
+                    stroke="#22c55e"
+                    strokeWidth={2.5}
+                    fill="url(#revenueOnlyArea)"
+                    activeDot={{ r: 4 }}
+                  />
+                </AreaChart>
               </ResponsiveContainer>
             </div>
           )}
+        </section>
+
+        <section className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {statCards.map((card) => (
+            <div
+              key={card.title}
+              className="rounded-3xl border border-zinc-100 bg-white p-5 shadow-sm"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-xs font-bold tracking-widest text-zinc-400 uppercase">
+                    {card.title}
+                  </p>
+                  <p className="mt-2 text-3xl font-extrabold text-zinc-900">
+                    {card.value}
+                  </p>
+                </div>
+                <div
+                  className={`flex h-12 w-12 items-center justify-center rounded-2xl border ${card.accentClass}`}
+                >
+                  {card.icon}
+                </div>
+              </div>
+            </div>
+          ))}
         </section>
       </main>
     </div>
