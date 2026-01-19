@@ -8,6 +8,7 @@ import {
   Plus,
   Search,
   LayoutDashboard,
+  BarChart3,
   ArrowUpDown,
   ChevronDown,
   Check,
@@ -380,6 +381,14 @@ export default function AdminTable() {
             >
               <ChefHat size={18} />
               <span>Екран Кухні</span>
+            </Link>
+
+            <Link
+              href="/admin/analytics"
+              className="flex items-center gap-2 rounded-xl border border-zinc-200 bg-white px-5 py-2.5 text-sm font-bold text-zinc-700 shadow-sm transition hover:bg-zinc-50"
+            >
+              <BarChart3 size={18} />
+              <span>Аналітика</span>
             </Link>
 
             <button
