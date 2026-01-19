@@ -14,6 +14,7 @@ import {
   X,
   Star,
   ChefHat,
+  QrCode,
 } from 'lucide-react'
 import AdminDishForm from './AdminDishForm'
 import type { Dish } from '@/types/menu'
@@ -364,6 +365,14 @@ export default function AdminTable() {
           </div>
 
           <div className="flex gap-3">
+            {/* Нова кнопка QR */}
+            <Link
+              href="/admin/qr"
+              className="flex items-center gap-2 rounded-xl border border-zinc-200 bg-white px-5 py-2.5 text-sm font-bold text-zinc-700 shadow-sm transition hover:bg-zinc-50"
+            >
+              <QrCode size={18} />
+              <span>QR Столів</span>
+            </Link>
             {/* КНОПКА ПЕРЕХОДУ НА КУХНЮ */}
             <Link
               href="/admin/kitchen"

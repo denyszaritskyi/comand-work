@@ -257,5 +257,97 @@
     "status": "completed",
     "tableNumber": "1",
     "stoppedAt": 1768649072644
+  },
+  {
+    "id": "1768722728744",
+    "createdAt": 1768722728744,
+    "items": [
+      {
+        "key": "12-m-caesar-bacon|caesar-parmesan",
+        "dishId": 12,
+        "name": "Салат Цезар",
+        "imageSrc": "/dishes/cezar.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [
+          {
+            "id": "caesar-bacon",
+            "label": "Бекон",
+            "price": 18
+          },
+          {
+            "id": "caesar-parmesan",
+            "label": "Пармезан",
+            "price": 15
+          }
+        ],
+        "unitPrice": 183,
+        "quantity": 1
+      },
+      {
+        "key": "3-m-pumpkin-cream",
+        "dishId": 3,
+        "name": "Крем-суп з гарбуза",
+        "imageSrc": "/dishes/sup.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [
+          {
+            "id": "pumpkin-cream",
+            "label": "Додаткові вершки",
+            "price": 8
+          }
+        ],
+        "unitPrice": 153,
+        "quantity": 1
+      }
+    ],
+    "total": 336,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768731685619
+  },
+  {
+    "id": "1768731806130",
+    "createdAt": 1768731806130,
+    "items": [
+      {
+        "key": "10-m-",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 190,
+        "quantity": 1
+      },
+      {
+        "key": "11-m-pizza-pepperoni-crust|pizza-pepperoni-jalapeno",
+        "dishId": 11,
+        "name": "Піца Пепероні",
+        "imageSrc": "/dishes/peperoni.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [
+          {
+            "id": "pizza-pepperoni-jalapeno",
+            "label": "Халапеньйо",
+            "price": 12
+          },
+          {
+            "id": "pizza-pepperoni-crust",
+            "label": "Сирний бортик",
+            "price": 28
+          }
+        ],
+        "unitPrice": 250,
+        "quantity": 1
+      }
+    ],
+    "total": 440,
+    "status": "cancelled",
+    "tableNumber": "1",
+    "stoppedAt": 1768731817325
   }
 ]
