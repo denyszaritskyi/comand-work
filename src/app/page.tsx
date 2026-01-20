@@ -11,6 +11,8 @@ import HeroHeader from '@/components/HeroHeader'
 import MenuCard from '@/components/MenuCard'
 import { useHomePage } from '@/components/useHomePage'
 import { useCartStore } from '@/store/cartStore'
+import Link from 'next/link'
+import { useUnpaidOrdersNotification } from '@/components/useUnpaidOrdersNotification'
 
 // Створюємо компонент-обгортку, який читає параметри (вимога Next.js)
 function TableSetter() {
@@ -29,6 +31,7 @@ function TableSetter() {
 
 export default function Home() {
   const { addToCart, items } = useCartStore()
+  const hasUnpaidOrders = useUnpaidOrdersNotification()
   const [isCartOpen, setIsCartOpen] = useState(false)
   // ... (весь код useHomePage без змін) ...
   const {
@@ -92,6 +95,17 @@ export default function Home() {
 
   return (
     <div className="text-foreground min-h-screen bg-zinc-50 font-sans">
+      {hasUnpaidOrders && (
+        <div className="fixed top-4 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 rounded-lg border border-yellow-300 bg-yellow-100 px-4 py-2 text-yellow-900 shadow-lg">
+          <span>
+            У вас є неоплачені замовлення! Перейдіть у{' '}
+            <Link href="/my-orders" className="font-semibold underline">
+              Мої замовлення
+            </Link>{' '}
+            для оплати.
+          </span>
+        </div>
+      )}
       {/* Читаємо номер столу */}
       <Suspense fallback={null}>
         <TableSetter />

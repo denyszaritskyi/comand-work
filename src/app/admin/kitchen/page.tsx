@@ -44,6 +44,8 @@ function OrderCardContent({
       ready: 'border-emerald-500',
       completed: 'border-gray-500',
       cancelled: 'border-red-500',
+      paid: 'border-green-500',
+      partially_paid: 'border-yellow-500',
     }[order.status] || 'border-zinc-200'
 
   return (
@@ -60,6 +62,13 @@ function OrderCardContent({
             <span className="rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-xs text-zinc-500">
               #{order.id.slice(-3)}
             </span>
+            {(order.status === 'paid' || order.status === 'partially_paid') && (
+              <span
+                className={`ml-2 rounded px-2 py-0.5 text-xs font-semibold ${order.status === 'paid' ? 'border border-green-300 bg-green-100 text-green-700' : 'border border-yellow-300 bg-yellow-100 text-yellow-700'}`}
+              >
+                {order.status === 'paid' ? 'Оплачено' : 'Частково оплачено'}
+              </span>
+            )}
           </div>
           <div className="mt-0.5 text-[10px] font-medium tracking-wider text-zinc-400 uppercase">
             {new Date(order.createdAt).toLocaleTimeString([], {
@@ -322,7 +331,12 @@ export default function KitchenPage() {
             <KanbanColumn
               id="new"
               title="Нові"
-              orders={orders.filter((o) => o.status === 'new')}
+              orders={orders.filter(
+                (o) =>
+                  o.status === 'new' ||
+                  o.status === 'paid' ||
+                  o.status === 'partially_paid'
+              )}
               onUpdateStatus={updateStatus}
             />
             <KanbanColumn

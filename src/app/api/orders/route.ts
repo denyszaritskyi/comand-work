@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
 }
 
 export async function PUT(req: NextRequest) {
-  const { id, status } = await req.json()
+  const { id, status, paidItems } = await req.json()
   const orders = await readOrders()
 
   const orderIndex = orders.findIndex((o) => o.id === id)
@@ -51,7 +51,21 @@ export async function PUT(req: NextRequest) {
   }
 
   const order = orders[orderIndex]
-  order.status = status as OrderStatus
+  if (status === 'partially_paid' && Array.isArray(paidItems)) {
+    // Позначаємо оплачені позиції (додаємо paid: true)
+    order.items = order.items.map((item) =>
+      paidItems.includes(item.key) ? { ...item, paid: true } : item
+    )
+    // Якщо всі оплачені — ставимо paid
+    const allPaid = order.items.every((item) => item.paid)
+    order.status = allPaid ? 'paid' : 'partially_paid'
+  } else {
+    order.status = status as OrderStatus
+    // Якщо повністю оплачено — всі позиції paid
+    if (status === 'paid') {
+      order.items = order.items.map((item) => ({ ...item, paid: true }))
+    }
+  }
 
   // ЛОГІКА ТАЙМЕРА:
   // Якщо статус "Готові", "Завершені" або "Відмінені" — фіксуємо час зупинки

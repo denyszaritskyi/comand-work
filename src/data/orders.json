@@ -349,5 +349,628 @@
     "status": "cancelled",
     "tableNumber": "1",
     "stoppedAt": 1768731817325
+  },
+  {
+    "id": "1768918106751",
+    "createdAt": 1768918106751,
+    "items": [
+      {
+        "key": "11-m-",
+        "dishId": 11,
+        "name": "Піца Пепероні",
+        "imageSrc": "/dishes/peperoni.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1
+      },
+      {
+        "key": "13-m-",
+        "dishId": 13,
+        "name": "Салат Грецький",
+        "imageSrc": "/dishes/greecesalad.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 145,
+        "quantity": 1
+      }
+    ],
+    "total": 355,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932176720
+  },
+  {
+    "id": "1768918551114",
+    "createdAt": 1768918551114,
+    "items": [
+      {
+        "key": "5-m-",
+        "dishId": 5,
+        "name": "Стейк курячий",
+        "imageSrc": "/dishes/stake.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1
+      },
+      {
+        "key": "10-m-",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 190,
+        "quantity": 1
+      }
+    ],
+    "total": 400,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932177527
+  },
+  {
+    "id": "1768927119081",
+    "createdAt": 1768927119081,
+    "items": [
+      {
+        "key": "5-m-",
+        "dishId": 5,
+        "name": "Стейк курячий",
+        "imageSrc": "/dishes/stake.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1
+      },
+      {
+        "key": "7-m-",
+        "dishId": 7,
+        "name": "Лимонад",
+        "imageSrc": "/dishes/limonad.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 75,
+        "quantity": 1
+      }
+    ],
+    "total": 285,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932177684
+  },
+  {
+    "id": "1768927387911",
+    "createdAt": 1768927387911,
+    "items": [
+      {
+        "key": "10-m-",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 190,
+        "quantity": 1
+      },
+      {
+        "key": "4-m-",
+        "dishId": 4,
+        "name": "Паста Болоньєзе",
+        "imageSrc": "/dishes/pasta.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 180,
+        "quantity": 1
+      },
+      {
+        "key": "7-m-",
+        "dishId": 7,
+        "name": "Лимонад",
+        "imageSrc": "/dishes/limonad.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 75,
+        "quantity": 1
+      }
+    ],
+    "total": 445,
+    "status": "cancelled",
+    "tableNumber": "1",
+    "stoppedAt": 1768930783934
+  },
+  {
+    "id": "1768927989839",
+    "createdAt": 1768927989839,
+    "items": [
+      {
+        "key": "11-m-",
+        "dishId": 11,
+        "name": "Піца Пепероні",
+        "imageSrc": "/dishes/peperoni.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1
+      },
+      {
+        "key": "3-m-",
+        "dishId": 3,
+        "name": "Крем-суп з гарбуза",
+        "imageSrc": "/dishes/sup.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 145,
+        "quantity": 1
+      }
+    ],
+    "total": 355,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932177849
+  },
+  {
+    "id": "1768929130446",
+    "createdAt": 1768929130446,
+    "items": [
+      {
+        "key": "5-m-",
+        "dishId": 5,
+        "name": "Стейк курячий",
+        "imageSrc": "/dishes/stake.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "2-m-",
+        "dishId": 2,
+        "name": "Сирники зі сметаною",
+        "imageSrc": "/dishes/sirniki.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 120,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "7-m-",
+        "dishId": 7,
+        "name": "Лимонад",
+        "imageSrc": "/dishes/limonad.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 75,
+        "quantity": 1,
+        "paid": true
+      }
+    ],
+    "total": 405,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932199605
+  },
+  {
+    "id": "1768929354651",
+    "createdAt": 1768929354651,
+    "items": [
+      {
+        "key": "11-m-",
+        "dishId": 11,
+        "name": "Піца Пепероні",
+        "imageSrc": "/dishes/peperoni.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "12-m-",
+        "dishId": 12,
+        "name": "Салат Цезар",
+        "imageSrc": "/dishes/cezar.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 150,
+        "quantity": 1,
+        "paid": true
+      }
+    ],
+    "total": 360,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932187720
+  },
+  {
+    "id": "1768929614437",
+    "createdAt": 1768929614437,
+    "items": [
+      {
+        "key": "14-m-",
+        "dishId": "14",
+        "name": "Паста Карбонара",
+        "imageSrc": "/dishes/carbonara.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 160,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "1-m-",
+        "dishId": 1,
+        "name": "Омлет з зеленню",
+        "imageSrc": "/dishes/omlet.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 95,
+        "quantity": 1,
+        "paid": true
+      }
+    ],
+    "total": 255,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932188420
+  },
+  {
+    "id": "1768929775446",
+    "createdAt": 1768929775446,
+    "items": [
+      {
+        "key": "11-m-",
+        "dishId": 11,
+        "name": "Піца Пепероні",
+        "imageSrc": "/dishes/peperoni.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "10-m-",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 190,
+        "quantity": 1,
+        "paid": true
+      }
+    ],
+    "total": 400,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932189113
+  },
+  {
+    "id": "1768929890674",
+    "createdAt": 1768929890674,
+    "items": [
+      {
+        "key": "11-m-",
+        "dishId": 11,
+        "name": "Піца Пепероні",
+        "imageSrc": "/dishes/peperoni.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "8-m-",
+        "dishId": 8,
+        "name": "Бургер класичний",
+        "imageSrc": "/dishes/burger.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 165,
+        "quantity": 1,
+        "paid": true
+      }
+    ],
+    "total": 375,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932189741
+  },
+  {
+    "id": "1768930142398",
+    "createdAt": 1768930142398,
+    "items": [
+      {
+        "key": "15-m-",
+        "dishId": "15",
+        "name": "Лосось на грилі",
+        "imageSrc": "/dishes/salmon.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 230,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "1-m-",
+        "dishId": 1,
+        "name": "Омлет з зеленню",
+        "imageSrc": "/dishes/omlet.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 95,
+        "quantity": 1,
+        "paid": true
+      }
+    ],
+    "total": 325,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932190374
+  },
+  {
+    "id": "1768930339019",
+    "createdAt": 1768930339019,
+    "items": [
+      {
+        "key": "10-m-",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 190,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "8-m-",
+        "dishId": 8,
+        "name": "Бургер класичний",
+        "imageSrc": "/dishes/burger.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 165,
+        "quantity": 1,
+        "paid": true
+      }
+    ],
+    "total": 355,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932191112
+  },
+  {
+    "id": "1768930718276",
+    "createdAt": 1768930718276,
+    "items": [
+      {
+        "key": "10-m-",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 190,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "4-m-",
+        "dishId": 4,
+        "name": "Паста Болоньєзе",
+        "imageSrc": "/dishes/pasta.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 180,
+        "quantity": 1,
+        "paid": true
+      }
+    ],
+    "total": 370,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932191597
+  },
+  {
+    "id": "1768930804848",
+    "createdAt": 1768930804848,
+    "items": [
+      {
+        "key": "13-m-",
+        "dishId": 13,
+        "name": "Салат Грецький",
+        "imageSrc": "/dishes/greecesalad.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 145,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "6-m-",
+        "dishId": 6,
+        "name": "Чізкейк",
+        "imageSrc": "/dishes/cheezcake.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 140,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "7-m-",
+        "dishId": 7,
+        "name": "Лимонад",
+        "imageSrc": "/dishes/limonad.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 75,
+        "quantity": 1,
+        "paid": true
+      }
+    ],
+    "total": 360,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932202393
+  },
+  {
+    "id": "1768930978418",
+    "createdAt": 1768930978418,
+    "items": [
+      {
+        "key": "4-m-",
+        "dishId": 4,
+        "name": "Паста Болоньєзе",
+        "imageSrc": "/dishes/pasta.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 180,
+        "quantity": 1
+      },
+      {
+        "key": "12-m-",
+        "dishId": 12,
+        "name": "Салат Цезар",
+        "imageSrc": "/dishes/cezar.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 150,
+        "quantity": 1
+      },
+      {
+        "key": "1-m-",
+        "dishId": 1,
+        "name": "Омлет з зеленню",
+        "imageSrc": "/dishes/omlet.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 95,
+        "quantity": 1
+      }
+    ],
+    "total": 425,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768931047097
+  },
+  {
+    "id": "1768931584524",
+    "createdAt": 1768931584524,
+    "items": [
+      {
+        "key": "8-m-",
+        "dishId": 8,
+        "name": "Бургер класичний",
+        "imageSrc": "/dishes/burger.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 165,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "14-m-",
+        "dishId": "14",
+        "name": "Паста Карбонара",
+        "imageSrc": "/dishes/carbonara.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 160,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "6-m-",
+        "dishId": 6,
+        "name": "Чізкейк",
+        "imageSrc": "/dishes/cheezcake.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 140,
+        "quantity": 1,
+        "paid": true
+      }
+    ],
+    "total": 465,
+    "status": "completed",
+    "tableNumber": "1",
+    "stoppedAt": 1768932206001
+  },
+  {
+    "id": "1768932158437",
+    "createdAt": 1768932158437,
+    "items": [
+      {
+        "key": "11-m-",
+        "dishId": 11,
+        "name": "Піца Пепероні",
+        "imageSrc": "/dishes/peperoni.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 210,
+        "quantity": 1,
+        "paid": true
+      },
+      {
+        "key": "10-m-",
+        "dishId": 10,
+        "name": "Піца Маргарита",
+        "imageSrc": "/dishes/pizza.avif",
+        "sizeId": "m",
+        "sizeLabel": "Стандарт",
+        "addons": [],
+        "unitPrice": 190,
+        "quantity": 1,
+        "paid": true
+      }
+    ],
+    "total": 400,
+    "status": "paid",
+    "tableNumber": "1"
   }
 ]

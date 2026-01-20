@@ -32,6 +32,7 @@ export type CartItem = {
   addons: AddonOption[]
   unitPrice: number
   quantity: number
+  paid?: boolean // для часткової оплати
 }
 
 export type OrderStatus =
@@ -40,6 +41,8 @@ export type OrderStatus =
   | 'ready'
   | 'completed'
   | 'cancelled'
+  | 'paid'
+  | 'partially_paid'
 
 export type Order = {
   id: string
